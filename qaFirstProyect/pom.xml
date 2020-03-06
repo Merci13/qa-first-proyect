@@ -18,3 +18,9 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 </project>
+<dependency>
+  <groupId>org.postgresql.Driver</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>42.2.10.jar</version>
+  <type>bundle</type>
+</dependency>

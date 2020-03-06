@@ -16,7 +16,6 @@ public class db_methodos {
 
     public void schedualRegister(String diaInicio, String diaFinal, String Ruta, int placaBus, String descripcionDelHorario, String horasDeSalida, String horasDeLlegada) {
         
-      
     }
     
 }
