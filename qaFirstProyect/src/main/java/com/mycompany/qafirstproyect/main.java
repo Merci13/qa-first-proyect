@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package com.mycompany.qafirstproyect;
-
+import db.db_methodos;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.DriverManager;
 /**
  *
  * @author Jorge Solis
  */
 public class main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, Exception {
         
     }
     

@@ -39,10 +39,5 @@ public class metodos_de_clase {
              descripcionDelHorario,
              horasDeSalida,
              horasDeLlegada);
-        
-        
-    
-    
-    }
-    
+    }  
 }
