@@ -10,8 +10,7 @@ import java.sql.*;
  *
  * @author josue
  * 
- * Url de coneccion 
- * jdbc:postgresql://localhost:5432/proyectoQAJorgeSolis [postgres on Default schema]
+ * 
  */
 public class db_methodos {
 
