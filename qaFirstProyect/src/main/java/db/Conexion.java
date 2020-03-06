@@ -4,60 +4,34 @@
  * and open the template in the editor.
  */
 package db;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 
-import java.sql.*;
 /**
  *
  * @author josue
  */
 public class Conexion {
+        private static final String DRIVER = "org.postgresql.Driver";
+    private static final String TIPO = "jdbc:postgresql://";
+    private static final String SERVER = "localhost";
+    private static final String PUERTO = "5432";
+    private static final String DB = "testing";
+    private static final String USER = "postgres";
+    private static final String PASS= "12345678";
     
-    public Asociate conection(){
-    
-     Asociate asociate = new Asociate();
-        
-           String url = "jdbc:postgresql://localhost:5432/proyectoQAJorgeSolis";
-    String user = "postgress";
-    String password = "elo2016";
-    try{
-        
-        
-    
-   Class.forName("org.postgresql.Driver");
-   Connection conection = DriverManager.getConnection(url, user, password);
-   java.sql.Statement st = conection.createStatement();
-   String sql = "SELECT asociate.id,asociate.name,asociate.line,asociate.last_name, asociate_status FROM asociates" ;
-   ResultSet result = st.executeQuery(sql);
-    while(result.next()){
-        int id = result.getInt("asociate.id");
-        String name = result.getString("asociate.name");
-        int line = result.getInt("asociate.line");
-        String lastName = result.getString("asociate.last_name");
-        boolean status = result.getBoolean("asociate_status");
-        asociate = new asociate(id, name, line, lastName, status);
-       
-    
+    public static Connection conection() throws Exception{
+        Connection c = null;
+        try {
+            Class.forName(DRIVER);
+            c = DriverManager.getConnection(TIPO + SERVER + ":" + PUERTO + "/" + DB, USER, PASS);
+            return c;
+        } catch (Exception e) {
+            throw e;
+        }
     }
-    result.close();
-    st.close();
-    conection.close();
-    
-        System.out.println(""+asociate.toString());
-        System.out.println("blanabasfsd");
-    estaloco();
-}catch(Exception e){
-    
-        System.out.println("Error de coneccion " + e);
-}
-
-        
-    }
-
-    
-    }
+ 
     
     
     
