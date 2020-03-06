@@ -5,14 +5,19 @@
  */
 package db;
 
+import java.sql.*;
 /**
  *
  * @author josue
+ * 
+ * Url de coneccion 
+ * jdbc:postgresql://localhost:5432/proyectoQAJorgeSolis [postgres on Default schema]
  */
 public class db_methodos {
 
     public void schedualRegister(String diaInicio, String diaFinal, String Ruta, int placaBus, String descripcionDelHorario, String horasDeSalida, String horasDeLlegada) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+      
     }
     
 }
